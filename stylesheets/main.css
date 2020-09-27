@@ -1,0 +1,339 @@
+body {
+    background: url('https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.timeline {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+
+}
+
+.line {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding-bottom: 5px;
+    background: white;
+}
+
+.squares {
+    position: absolute;
+    z-index: 10;
+    width: 15px;
+    padding-bottom: 15px;
+    transition: transform 0.4s ease-in-out;
+}
+.squares:nth-child(1) {
+    left: 0%;
+    background: yellow;
+    transform: scale(1.4, 1.4);
+}
+.squares:nth-child(2) {
+    left: 50%;
+    background: white;
+}
+.squares:nth-child(3) {
+    left: 99%;
+    background: white;
+}
+
+.squares i {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    color: white;
+}
+
+.carousel-container {
+    width: 50%;
+    margin: auto;
+    margin-top: 10vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+.carousel-container:hover {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.24),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.4);  
+}
+
+.carousel-slide {
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    transition: background 0.4s ease-in-out;
+}
+.slide:nth-child(1) {
+    background: linear-gradient(90deg, rgba(0, 246, 246, 0.3), rgba(41, 136, 136, 0.3));
+}
+
+.slide:nth-child(2) {
+    background: linear-gradient(90deg, rgba(3, 255, 158, 0.3), rgba(52, 146, 107, 0.3));
+}
+.slide:nth-child(3) {
+    background: linear-gradient(90deg, rgba(255, 251, 0, 0.3), rgba(185, 175, 38, 0.3));
+}
+
+.slide:nth-child(1):hover, .slide:nth-child(1):focus {
+    background: linear-gradient(90deg, rgba(0, 246, 246, 0.7), rgba(41, 136, 136, 0.7));  
+}
+.slide:nth-child(2):hover, .slide:nth-child(2):focus {
+    background: linear-gradient(90deg, rgba(3, 255, 158, 0.7), rgba(52, 146, 107, 0.7));
+}
+.slide:nth-child(3):hover, .slide:nth-child(3):focus {
+    background: linear-gradient(90deg, rgba(255, 251, 0, 0.7), rgba(185, 175, 38, 0.7));
+}
+
+#prev {
+    position: absolute;
+    z-index: 10;
+    top: 46%;
+    left: 5%;
+    font-size: 2em;
+    color: rgb(73, 71, 71);
+    background: rgba(202, 202, 202, 0.5);
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+    display: none;
+} 
+
+#prev:hover {
+    transform: scale(1.5, 1.5);
+}
+
+#next {
+    position: absolute;
+    z-index: 10;
+    top: 46%;
+    right: 5%;
+    font-size: 2em;
+    color: rgb(73, 71, 71);
+    background: rgba(202, 202, 202, 0.5);
+    border-radius: 50%;
+    transition: all 0.2s ease-out;
+}
+
+#next:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    background: rgb(226, 15, 191);
+    margin-top: 30px;
+    border-radius: 15px;
+    color: white;
+    border: none;
+    font-size: 1.4em;
+    padding: 3px 7px;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    transition: background 0.4s linear;
+}
+input[type="submit"]:hover {
+    transform: scaleX(1, 1);
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.24),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.4);  
+}
+
+h1 {
+    font-family: 'Krona One', sans-serif;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    font-size: 1.6em;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: 0.15em;
+}
+label {
+    font-family: 'Krona One', sans-serif;
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+    padding: 10px 5px;
+    font-size: 1.3em;
+    color: white;
+    text-align: center;
+}
+input {
+    display: block;
+    width: 70%;
+    margin: auto;
+    padding: 10px 7px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: all 0.3s linear;
+}
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px 2px rgb(136, 255, 100), 
+    0px 0px 6px 3px rgb(0, 255, 157);
+}
+
+@media (max-width:425px) {
+    .line {
+        margin-top: 2.5%;
+    }
+}
+
+@media (max-width:320px) {
+    .line {
+        margin-top: 2.4%;
+    }
+}
+
+@media (min-width:425px) {
+    .line {
+        margin-top: 1.8%;
+    }
+}
+
+@media (min-width:500px) {
+    .line {
+        margin-top: 1.4%;
+    }
+}
+
+@media (min-width:768px) {
+    .line {
+        margin-top: 1%;
+    }
+}
+@media (min-width:1024px) {
+    .line {
+        margin-top: 0.55%;
+    }
+}
+@media (min-width:1400px) {
+    .line {
+        margin-top: 0.4%;
+    }
+}
+@media (min-width:1700px) {
+    .line {
+        margin-top: 0.3%;
+    }
+}
+@media (min-width:2000px) {
+    .line {
+        margin-top: 0.2%;
+    }
+}
+
+@media (max-width:2560px) {
+    .slide{
+        height: 462px;
+    }
+}
+
+@media (max-width:1024px) {
+    .carousel-container {
+        width: 75%;
+        margin-top: 8.5vh;
+    }
+    input {
+        width: 65%;
+    }
+    .slide {
+        height: 462px;
+    }
+
+}
+
+@media (max-width:768px) {
+    .carousel-container {
+        width: 75%;
+        margin-top: 8.5vh;
+    }
+    label {
+        font-size: 1em;
+    }
+    input {
+        width: 65%;
+    }
+    #prev {
+        left: 2%;
+    }
+    #next {
+        right: 2%;
+    }
+    .slide {
+        height: 462px;
+    }
+
+}
+
+@media (max-width:425px) {
+    .carousel-container {
+        width: 100%;
+        margin-top: 7vh;
+    }
+    label {
+        font-size: 1em;
+    }
+    input {
+        width: 70%;
+    }
+    #prev {
+        left: 2%;
+    }
+    #next {
+        right: 2%;
+    }
+    .slide{
+        height: 440px
+    }
+}
+
+@media (max-width:320px) {
+    .carousel-container {
+        width: 100%;
+        margin-top: 7vh;
+    }
+    label {
+        font-size: 1em;
+    }
+    input {
+        width: 80%;
+    }
+    #prev {
+        left: 2%;
+    }
+    #next {
+        right: 2%;
+    }
+    .slide:nth-child(3) {
+        height: 440px
+    }
+}

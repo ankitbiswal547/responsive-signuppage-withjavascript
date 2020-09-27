@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>timeline</title>
+        <script src="https://use.fontawesome.com/2f399a138d.js"></script>
+        <link rel="stylesheet" href="./stylesheets/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div class="timeline">
+            <div class="squares"></div>
+            <div class="squares"></div>
+            <div class="squares"></div>
+            <div class="line"></div>
+        </div>
+
+        <br>
+        <div class="carousel-container">
+            <i class="fa fa-arrow-right" aria-hidden="true" id="next"></i>
+            <i class="fa fa-arrow-left" aria-hidden="true" id="prev"></i>
+                <form action="#" class="carousel-slide">
+                    <div class="slide"> 
+                        <h1>PERSONAL INFO:</h1>                  
+                        <label for="firstname">FIRSTNAME:</label>
+                        <input type="text" placeholder="Firstname" name="firstname">
+                        <label for="lastname">LASTNAME:</label>
+                        <input type="text" placeholder="lastname" name="lastname">
+                        <label for="country">COUNTRY:</label>
+                        <input type="text" placeholder="country" name="country">
+                        <label for="regilion">RELIGION:</label>
+                        <input type="text" id="religion" placeholder="religion" name="religion">
+                    </div>
+                    <div class="slide">
+                        <h1>CONTACT INFO:</h1>                  
+                        <label for="email">EMAIL-ID:</label>
+                        <input type="email" placeholder="xyz@gmail.com" name="email">
+                        <label for="phoneNum">PHONE:</label>
+                        <input type="text" placeholder="e.g-8944XXXXXX" name="phoneNum">
+                        <label for="githublink">GITHUB-ACCOUNT-LINK:</label>
+                        <input type="text" placeholder="githublink" name="githublink">
+                        <label for="codechefusername">CODECHEF(optional):</label>
+                        <input type="text" placeholder="codechef-username" name="codechefUsername">
+                    </div>
+                    <div class="slide">
+                        <h1>LOGIN INFO:</h1>
+                        <label for="username">USERNAME:</label>
+                        <input type="username" id="username" placeholder="username" name="username">
+                        <label for="password">PASSWORD:</label>
+                        <input type="password" id="password" placeholder="password" name="password">
+                        <input type="submit" class="btn">
+                    </div>
+                </form>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
